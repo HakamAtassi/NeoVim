@@ -7,7 +7,7 @@
 :set ignorecase
 :set hlsearch
 :set wildmenu
-
+:set encoding=UTF-8
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -16,11 +16,8 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 
-
-
-require'lspconfig'.clangd.setup{}
 
 
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -38,15 +35,14 @@ Plug 'https://github.com/jiangmiao/auto-pairs' "automatically close pairs of stu
 Plug 'scrooloose/syntastic' "Syntax checking 
 Plug 'sheerun/vim-polyglot' "More Syntax stuff 
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' } "Spaceduck Theme
+Plug 'evprkr/galaxian-vim' "Galaxian Theme
+Plug 'ryanoasis/vim-devicons' "File icons for nerdtree
 
-
+Plug 'preservim/nerdtree' "File explorer
 
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' "fuzzy file finder
-
-
-
 
 call plug#end()
 
@@ -59,5 +55,8 @@ call plug#end()
 colorscheme spaceduck
 
 
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
