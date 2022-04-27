@@ -6,7 +6,7 @@ Current theme is [Spaceduck](https://github.com/pineapplegiant/spaceduck)
 
 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/83780720/165432812-21fc6d16-35c1-4c8c-ac56-1264945582c2.png">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/83780720/165446144-53a436eb-22ef-4dc3-9b94-7af2cf26c862.png>
 </p>
 
 
