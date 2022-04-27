@@ -1,14 +1,18 @@
 # NeoVim Configuration
 
-## Theme 
-Current theme is [Spaceduck](https://github.com/pineapplegiant/spaceduck)
 
-
+## Showcase
 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/83780720/165446144-53a436eb-22ef-4dc3-9b94-7af2cf26c862.png>
+  <img width="900" height="600" src="https://user-images.githubusercontent.com/83780720/165447829-b905c1a5-76a3-4924-bbfa-7a8b52d82407.png">
 </p>
 
+
+## Theme 
+
+
+
+Current theme is [Galaxian](https://github.com/leftbones/galaxian-vim)
 
 
 
@@ -39,6 +43,9 @@ Plug 'https://github.com/jiangmiao/auto-pairs' "automatically close pairs of stu
 Plug 'scrooloose/syntastic' "Syntax checking 
 Plug 'sheerun/vim-polyglot' "More Syntax stuff 
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' } "Spaceduck Theme
+Plug 'evprkr/galaxian-vim' "Galaxian Theme
+Plug 'ryanoasis/vim-devicons' "File icons for nerdtree
+Plug 'preservim/nerdtree' "File explorer
 ```
 ## Language Server
   Clangd is the primary language server for C and C++
