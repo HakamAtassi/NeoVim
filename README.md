@@ -5,6 +5,13 @@ Current theme is [Spaceduck](https://github.com/pineapplegiant/spaceduck)
 
 
 
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/83780720/165432812-21fc6d16-35c1-4c8c-ac56-1264945582c2.png">
+</p>
+
+
+
+
 
 ## Build in settings
 
