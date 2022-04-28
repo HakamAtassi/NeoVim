@@ -4,7 +4,7 @@
 ## Showcase
 
 <p align="center">
-  <img width="900" height="600" src="https://user-images.githubusercontent.com/83780720/165447829-b905c1a5-76a3-4924-bbfa-7a8b52d82407.png">
+  <img width="900" height="600" src="https://user-images.githubusercontent.com/83780720/165687548-fe88420e-fe74-4cb8-9e61-469e6dcd966d.png">
 </p>
 
 
