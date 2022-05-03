@@ -2,9 +2,10 @@
 
 
 ## Showcase
-<p align="center">
-<img align="center" src=images/TerminalSS.png>
-</p>
+![](images/TerminalSS.png)
+
+
+
 
 ## Theme 
 
