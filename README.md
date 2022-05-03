@@ -4,7 +4,7 @@
 ## Showcase
 
 <p align="center">
-  <img src=images/TerminalSS.png width=auto height=auto>
+  <img src=images/TerminalSS.png width="900" height="600">
 </p>
 
 
