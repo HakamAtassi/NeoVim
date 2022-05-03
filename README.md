@@ -6,7 +6,6 @@
 <img align="center" src=images/TerminalSS.png>
 </p>
 
-
 ## Theme 
 
 
