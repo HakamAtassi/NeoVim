@@ -3,9 +3,8 @@
 
 ## Showcase
 
-<p align="center">
-  <img src=images/TerminalSS.png width="900" height="600">
-</p>
+<img align= center src=images/TerminalSS.png>
+
 
 
 ## Theme 
