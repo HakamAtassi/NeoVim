@@ -2,7 +2,7 @@
 
 
 ## Showcase
-![](images/TerminalSS.png)
+![](images/TerminalSS_TokyNight.png)
 
 
 
@@ -11,8 +11,9 @@
 
 
 
-Current theme is [Galaxian](https://github.com/leftbones/galaxian-vim)
+~Current theme is [Galaxian](https://github.com/leftbones/galaxian-vim)~
 
+Current theme is [TokyoNight](https://github.com/folke/tokyonight.nvim)
 
 
 
