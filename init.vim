@@ -1,3 +1,5 @@
+:set nowrap
+syntax on
 :set number
 :set autoindent
 :set smarttab
@@ -7,56 +9,66 @@
 :set ignorecase
 :set hlsearch
 :set wildmenu
-:set encoding=UTF-8
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-
-
-
-source $HOME/.config/nvim/plug-config/coc.vim
-
-
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+    
 
 call plug#begin()
-
 Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
-Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/neoclide/coc.nvim' "auto complete for cpp
-Plug 'https://github.com/jiangmiao/auto-pairs' "automatically close pairs of stuff
-Plug 'scrooloose/syntastic' "Syntax checking 
-Plug 'sheerun/vim-polyglot' "More Syntax stuff 
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' } "Spaceduck Theme
-Plug 'evprkr/galaxian-vim' "Galaxian Theme
+Plug 'scrooloose/syntastic'
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons' "File icons for nerdtree
 
-Plug 'preservim/nerdtree' "File explorer
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'ryanoasis/vim-devicons'
+Plug 'Raimondi/delimitMate'
 
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim' "fuzzy file finder
+
+Plug 'tpope/vim-vividchalk'
+Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
+
+
 
 call plug#end()
 
 
-  if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-  endif
-colorscheme spaceduck
+let g:tokyonight_style = "storm"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_transparent = 1
+let g:tokyonight_transparent_sidebar = 1
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+let g:tokyonight_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+
+" Load the colorscheme
+colorscheme tokyonight
+
+
+
+
+
+
+
+
+
+
 
 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-
