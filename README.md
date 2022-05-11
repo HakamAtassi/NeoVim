@@ -2,7 +2,7 @@
 
 
 ## Showcase
-![](images/TokyNightSS.png)
+![](images/TokyoNightFixedBG.png)
 
 
 
@@ -20,6 +20,8 @@ Current theme is [TokyoNight](https://github.com/folke/tokyonight.nvim)
 ## Build in settings
 
 ```
+:set nowrap
+syntax on
 :set number
 :set autoindent
 :set smarttab
@@ -29,6 +31,9 @@ Current theme is [TokyoNight](https://github.com/folke/tokyonight.nvim)
 :set ignorecase
 :set hlsearch
 :set wildmenu
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
 ```
 ## Plug-ins
   Plug-ins are managed using VimPlug
@@ -53,3 +58,5 @@ Plug 'preservim/nerdtree' "File explorer
 ## Auto complete
   CoC is the primary autocompletion plug-in
   
+## TODO
+  Migrate to Kitty terminal
