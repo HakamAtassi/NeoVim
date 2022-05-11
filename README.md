@@ -2,7 +2,7 @@
 
 
 ## Showcase
-![](images/TerminalSS_TokyNight.png)
+![](images/TokyNightSS.png)
 
 
 
