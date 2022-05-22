@@ -58,5 +58,13 @@ Plug 'preservim/nerdtree' "File explorer
 ## Auto complete
   CoC is the primary autocompletion plug-in
   
+  
+## Gnome Themeing
+
+[Gogh](https://github.com/Gogh-Co/Gogh) used to set Gnome terminal theme 
+
 ## TODO
   Migrate to Kitty terminal
+  
+  
+  
