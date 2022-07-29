@@ -1,8 +1,11 @@
+
 :syntax on
-:se cursorline
+:set nowrap
+:set cursorline
 :set number
 :set autoindent
 :set smarttab
+:set showtabline=1
 :set mouse=a
 :set syntax
 :set incsearch 
@@ -11,10 +14,7 @@
 :set wildmenu
 :set tabstop=4
 :set shiftwidth=4
-:set expandtab
 
-:set listchars=tab:\|\ 
-:set list
     
 
 call plug#begin()
@@ -41,6 +41,8 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 
 call plug#end()
@@ -56,17 +58,9 @@ call plug#end()
 
 " Load the colorscheme
 
-let g:airline_theme='purify'
-colorscheme purify
+:colorscheme tokyonight
 
-let g:purify_override_colors = {
-    \ 'pink':  { 'gui': '#FF87FF', 'cterm': '213' },
-    \ 'green': { 'gui': '#5FD700', 'cterm': '76' }
-\ }
-
-
-colorscheme purify
-hi Normal guibg=#252834 ctermbg=234 "---- Place this after you set the colorscheme
+:highlight Comment guifg=#ffd699
 
 
 
@@ -83,3 +77,39 @@ noremap ; l
 noremap l k
 noremap k j
 noremap j h
+
+
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
+vnoremap < <gv
+vnoremap > >gv
+
+
+
+"nvim snippets 
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
+
+
+
+
+
