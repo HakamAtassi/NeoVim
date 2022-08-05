@@ -1,4 +1,3 @@
-
 :syntax on
 :set nowrap
 :set cursorline
@@ -13,9 +12,7 @@
 :set hlsearch
 :set wildmenu
 :set tabstop=4
-:set shiftwidth=4
-
-    
+:set shiftwidth=4  
 
 call plug#begin()
 Plug 'https://github.com/vim-airline/vim-airline'
@@ -32,7 +29,7 @@ Plug 'ryanoasis/vim-devicons' "File icons for nerdtree
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'Raimondi/delimitMate'
-
+Plug 'rcarriga/nvim-notify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'tpope/vim-vividchalk'
@@ -57,15 +54,29 @@ call plug#end()
 
 
 " Load the colorscheme
+"let g: tokyonight_transparent = 1
+":colorscheme tokyonight
+" Example config in VimScript
+"
 
-:colorscheme tokyonight
+let g:tokyonight_style = "night"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_transparent = 1
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
-:highlight Comment guifg=#ffd699
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+let g:tokyonight_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+
+" Load the colorscheme
+colorscheme tokyonight
 
 
 
-
-
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -79,12 +90,13 @@ noremap k j
 noremap j h
 
 
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 
 vnoremap < <gv
 vnoremap > >gv
+
+
+set clipboard+=unnamedplus
 
 
 
@@ -107,9 +119,4 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
-
-
-
-
-
 
