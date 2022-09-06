@@ -9,6 +9,8 @@ syntax on
 :set shiftwidth=4  
 
 
+set clipboard+=unnamedplus
+
 call plug#begin()
 	Plug 'https://github.com/vim-airline/vim-airline'
 	"Plug 'scrooloose/syntastic'
@@ -38,11 +40,24 @@ call plug#begin()
 	Plug 'fcpg/vim-orbital'
 	Plug 'dracula/vim'
 
+	"FZF fuzzy finder
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+
+	Plug 'svermeulen/vim-cutlass'
+
+
 call plug#end()
 
+"cutlass X as cut key
+nnoremap x d
+xnoremap x d
+
+nnoremap xx dd
+nnoremap X D
 
 
-
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
@@ -60,15 +75,14 @@ noremap j h
 
 
 
-
 vnoremap < <gv
 vnoremap > >gv
 
 
-set clipboard+=unnamedplus
 
 :color tokyonight
-:color blue
+
+
 
 "nvim snippets 
 
@@ -89,5 +103,4 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
-
 
