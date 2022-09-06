@@ -56,6 +56,8 @@ xnoremap x d
 nnoremap xx dd
 nnoremap X D
 
+"ctrl f to fuzzy finder
+nnoremap <C-f> :Files<CR>
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
@@ -64,9 +66,9 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 
 nnoremap <leader>n :NERDTreeFocus<CR>
+
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 
 noremap ; l
 noremap l k
