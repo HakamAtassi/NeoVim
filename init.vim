@@ -45,9 +45,15 @@ call plug#begin()
 	Plug 'junegunn/fzf.vim'
 
 	Plug 'svermeulen/vim-cutlass'
+	"Plug 'vim-autoformat/vim-autoformat'
+	Plug 'rhysd/vim-clang-format'
 
 
 call plug#end()
+
+
+"Clang format stuff
+
 
 "cutlass X as cut key
 nnoremap x d
