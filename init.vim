@@ -7,7 +7,7 @@ syntax on
 :set hlsearch
 :set tabstop=4
 :set shiftwidth=4  
-
+:set termguicolors     " enable true colors support
 
 set clipboard+=unnamedplus
 
@@ -22,6 +22,9 @@ call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons' "File icons for nerdtree
 
+
+	"smooth scrolling
+	Plug 'psliwka/vim-smoothie'
 
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'ryanoasis/vim-devicons'
@@ -39,6 +42,12 @@ call plug#begin()
 	Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 	Plug 'fcpg/vim-orbital'
 	Plug 'dracula/vim'
+	Plug 'ayu-theme/ayu-vim'
+	Plug 'mangeshrex/everblush.vim'
+	Plug 'agude/vim-eldar'
+	Plug 'k4yt3x/ayu-vim-darker' " or other package manager
+	
+
 
 	"FZF fuzzy finder
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -47,6 +56,9 @@ call plug#begin()
 	Plug 'svermeulen/vim-cutlass'
 	"Plug 'vim-autoformat/vim-autoformat'
 	Plug 'rhysd/vim-clang-format'
+
+
+
 
 
 call plug#end()
@@ -88,8 +100,7 @@ vnoremap > >gv
 
 
 
-:color tokyonight
-
+colorscheme spaceduck
 
 
 "nvim snippets 
@@ -112,3 +123,6 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
+
+"better scrolling
+set scrolloff=10 " Keep 3 lines below and above the cursor
